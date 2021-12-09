@@ -1,3 +1,13 @@
+/**
+ *  Source Code: https://www.geeksforgeeks.org/merge-sort-using-multi-threading/
+ * 
+ * NOTE:
+ * 		This file is Modified and not an "EXACT original copy" to handle different sizes of threads.
+ * 		Few lines of code are edited and added to achieve this goal.
+ *    
+ *          
+ */
+
 // Java Program to implement merge sort using
 // multi-threading
 import java.lang.System;

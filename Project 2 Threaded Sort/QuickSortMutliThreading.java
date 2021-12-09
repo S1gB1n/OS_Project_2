@@ -1,3 +1,14 @@
+/**
+ *  Code source: https://www.geeksforgeeks.org/quick-sort-using-multi-threading/
+ * 
+ * 	NOTE:
+ * 		This file is Modified and not an "EXACT original copy" in the test file to handle different sizes of threads.
+ * 		Few lines of code are edited and added to achieve this goal.
+ * 		ex.
+ * 			If we only want to employ 2 threads, it will only fork only 2 times.
+ */
+
+
 // Java program for the above approach
 import java.io.*;
 import java.util.Random;
@@ -98,7 +109,8 @@ public class QuickSortMutliThreading
 										end,
 										arr);
 
-		System.out.println(Thread.currentThread().getName());
+
+		//System.out.print(Thread.currentThread().getName()+ ", "); // test to check what thread is working
 		// Left subproblem as separate thread
 		left.fork();
 		right.compute();

@@ -1,0 +1,123 @@
+\documentclass{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage{tikz} 
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\author{erljohn91 }
+\date{November 2021}
+\begin{document}
+\\10 item sort: test (showing that sorting works)
+\\Unsorted: [5, 5, 4, 5, 6, -4, 8, -6, 8, -6]
+\\Sorted: [-6, -6, -4, 4, 5, 5, 5, 6, 8, 8]
+\section{Threaded Quick Sort}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer}, ylabel={Time}, xmin=0, xmax=10000, ymin=0, ymax=10, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,4)(10000.0,11)(100000.0,32)(1000000.0,100)(1.0E7,985)};
+\addlegendentry{Threaded: 2}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,14)(1000000.0,91)(1.0E7,941)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer Items: 10000000}, ylabel={Time}, xmin=0, xmax=10000000, ymin=0, ymax=600, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,4)(10000.0,11)(100000.0,32)(1000000.0,100)(1.0E7,985)};
+\addlegendentry{Threaded: 2}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,14)(1000000.0,91)(1.0E7,941)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer}, ylabel={Time}, xmin=0, xmax=10000, ymin=0, ymax=10, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,2)(100000.0,12)(1000000.0,67)(1.0E7,713)};
+\addlegendentry{Threaded: 3}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,81)(1.0E7,954)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer Items: 10000000}, ylabel={Time}, xmin=0, xmax=10000000, ymin=0, ymax=600, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,2)(100000.0,12)(1000000.0,67)(1.0E7,713)};
+\addlegendentry{Threaded: 3}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,81)(1.0E7,954)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer}, ylabel={Time}, xmin=0, xmax=10000, ymin=0, ymax=10, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,59)(1.0E7,624)};
+\addlegendentry{Threaded: 4}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,81)(1.0E7,945)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer Items: 10000000}, ylabel={Time}, xmin=0, xmax=10000000, ymin=0, ymax=600, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,59)(1.0E7,624)};
+\addlegendentry{Threaded: 4}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,81)(1.0E7,945)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer}, ylabel={Time}, xmin=0, xmax=10000, ymin=0, ymax=10, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,1)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,58)(1.0E7,594)};
+\addlegendentry{Threaded: 5}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,1)(100000.0,7)(1000000.0,80)(1.0E7,931)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer Items: 10000000}, ylabel={Time}, xmin=0, xmax=10000000, ymin=0, ymax=600, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,1)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,58)(1.0E7,594)};
+\addlegendentry{Threaded: 5}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,1)(100000.0,7)(1000000.0,80)(1.0E7,931)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer}, ylabel={Time}, xmin=0, xmax=10000, ymin=0, ymax=10, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,1)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,61)(1.0E7,616)};
+\addlegendentry{Threaded: 6}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,80)(1.0E7,912)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}
+\begin{axis}[name=plot, xlabel={Number Of Integer Items: 10000000}, ylabel={Time}, xmin=0, xmax=10000000, ymin=0, ymax=600, width=1.1\textwidth]
+\addplot[ color=red, mark=square,] coordinates {(100.0,1)(1000.0,0)(10000.0,1)(100000.0,6)(1000000.0,61)(1.0E7,616)};
+\addlegendentry{Threaded: 6}
+\addplot[ color=blue, mark=square,] coordinates {(100.0,0)(1000.0,0)(10000.0,0)(100000.0,7)(1000000.0,80)(1.0E7,912)};
+\addlegendentry{Non-Threaded}
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{document}
